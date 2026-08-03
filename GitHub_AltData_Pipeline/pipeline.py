@@ -45,7 +45,7 @@ def run_once(db_path: str = "github_data.db") -> None:
         new_records = collect()
         if not new_records:
             logger.warning("No records collected — check GITHUB_TOKEN/rate limit, or retry later.")
-            return
+            raise SystemExit(1)
         upsert_raw(conn, new_records)
         logger.info("Stored %d new raw records", len(new_records))
 

@@ -15,6 +15,8 @@ Run with: pytest test_pipeline.py
 
 from unittest.mock import patch
 
+import pytest
+
 from storage import get_connection, upsert_raw
 
 import pipeline
@@ -77,11 +79,12 @@ def test_run_once_computes_features_over_full_history_not_just_new_records(tmp_p
     assert rolling_avg != 7.0
 
 
-def test_run_once_returns_early_when_collect_returns_no_records(tmp_path):
+def test_run_once_exits_when_collect_returns_no_records(tmp_path):
     db_path = str(tmp_path / "test.db")
 
     with patch("pipeline.collect", return_value=[]), patch("pipeline.export_to_excel") as mock_export:
-        pipeline.run_once(db_path=db_path)
+        with pytest.raises(SystemExit):
+            pipeline.run_once(db_path=db_path)
 
     conn = get_connection(db_path)
     raw_count = conn.execute("SELECT COUNT(*) FROM github_raw").fetchone()[0]

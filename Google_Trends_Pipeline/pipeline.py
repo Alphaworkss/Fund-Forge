@@ -29,7 +29,7 @@ def run_once(db_path: str = "alt_data.db") -> None:
         raw_records = collect()
         if not raw_records:
             logger.warning("No records collected — check keywords/timeframe, or retry later (rate limit).")
-            return
+            raise SystemExit(1)
         upsert_raw(conn, raw_records)
         logger.info("Stored %d raw records", len(raw_records))
 
