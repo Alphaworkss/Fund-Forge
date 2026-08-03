@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+schedule
+trendspy
+pandas
+pytest
+openpyxl

@@ -1,0 +1,4 @@
+2026-07-31 17:51:34,487 INFO Stored 15 new raw records
+2026-07-31 17:51:34,626 INFO Stored 535 feature records (from 535 total raw records)
+2026-07-31 17:51:35,099 INFO Exported 535 raw rows to github_data.xlsx
+^C

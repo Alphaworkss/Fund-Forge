@@ -1,0 +1,3 @@
+2026-08-01 18:36:07,809 INFO Stored 10233 new raw records
+2026-08-01 18:36:08,046 INFO Stored 12384 feature records (from 12384 total raw records)
+2026-08-01 18:36:11,592 INFO Exported 12384 raw rows to wallet_metrics.xlsx

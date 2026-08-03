@@ -1,0 +1,51 @@
+name: GitHub Alt-Data Pipeline
+
+on:
+  schedule:
+    - cron: '5 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: GitHub_AltData_Pipeline
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        id: run_pipeline
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python pipeline.py
+
+      - name: Commit and push data updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github_data.db github_data.xlsx run.log
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(github-altdata): automated data update"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Fail workflow if pipeline run failed
+        if: steps.run_pipeline.outcome == 'failure'
+        run: exit 1
