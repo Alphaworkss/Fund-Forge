@@ -1,7 +1,0 @@
-requests
-beautifulsoup4
-lxml
-pandas
-openpyxl
-browser-cookie3
-schedule
