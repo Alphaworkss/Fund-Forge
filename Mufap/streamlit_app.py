@@ -18,7 +18,10 @@ st.set_page_config(
 # CONFIGURATION
 # ============================================================
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 PREDICTION_FILE = os.path.join(
+    BASE_DIR,
     "predictions",
     "MUFAP",
     "MUFAP_NAV_PREDICTIONS.csv"
