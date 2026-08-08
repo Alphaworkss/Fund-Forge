@@ -1,0 +1,71 @@
+2026-07-27 22:43:53,413 | INFO | Starting Chromium Browser...
+2026-07-27 22:43:53,986 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-27 22:44:02,664 | INFO | HTML downloaded successfully
+2026-07-27 22:44:02,675 | WARNING | Performance Summary has no data
+2026-07-27 22:44:02,675 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3
+2026-07-27 22:44:07,773 | INFO | HTML downloaded successfully
+2026-07-27 22:44:07,784 | WARNING | Daily NAV has no data
+2026-07-27 22:44:07,785 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1
+2026-07-27 22:44:12,976 | INFO | HTML downloaded successfully
+2026-07-27 22:44:12,981 | WARNING | Assets Under Management has no data
+2026-07-27 22:44:12,982 | INFO | Closing Browser
+2026-07-27 22:51:40,385 | INFO | Starting Chromium Browser...
+2026-07-27 22:51:40,934 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-27 22:52:40,953 | WARNING | Retry 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1", waiting until "networkidle"
+
+2026-07-27 22:52:45,954 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-27 22:53:45,972 | WARNING | Retry 2: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1", waiting until "networkidle"
+
+2026-07-27 22:53:50,973 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-27 22:54:50,997 | WARNING | Retry 3: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1", waiting until "networkidle"
+
+2026-07-27 22:54:55,999 | ERROR | Maximum retries exceeded
+2026-07-27 22:54:56,000 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3
+2026-07-27 22:55:56,011 | WARNING | Retry 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3", waiting until "networkidle"
+
+2026-07-27 22:56:01,013 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3
+2026-07-27 22:57:01,036 | WARNING | Retry 2: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3", waiting until "networkidle"
+
+2026-07-27 22:57:06,038 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3
+2026-07-27 22:58:06,052 | WARNING | Retry 3: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=3", waiting until "networkidle"
+
+2026-07-27 22:58:11,053 | ERROR | Maximum retries exceeded
+2026-07-27 22:58:11,055 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1
+2026-07-27 22:59:11,078 | WARNING | Retry 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1", waiting until "networkidle"
+
+2026-07-27 22:59:16,080 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1
+2026-07-27 23:00:16,095 | WARNING | Retry 2: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1", waiting until "networkidle"
+
+2026-07-27 23:00:21,096 | INFO | Opening https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1
+2026-07-27 23:01:21,114 | WARNING | Retry 3: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.mufap.com.pk/Industry/IndustryStatMonthly?tab=1", waiting until "networkidle"
+
+2026-07-27 23:01:26,115 | ERROR | Maximum retries exceeded
+2026-07-27 23:01:26,116 | INFO | Closing Browser
+2026-07-27 23:06:10,149 | INFO | Performance Summary created.
+2026-07-27 23:06:46,158 | WARNING | Daily NAV has no data
+2026-07-27 23:07:21,703 | WARNING | Assets Under Management has no data
+2026-07-27 23:39:37,434 | INFO | Starting Browser...
+2026-07-28 00:12:39,596 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-28 00:12:45,090 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-28 00:12:50,564 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-28 00:14:11,985 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-28 00:14:18,557 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1
+2026-07-28 00:14:24,859 | ERROR | 403 Client Error: Forbidden for url: https://www.mufap.com.pk/Industry/IndustryStatDaily?tab=1

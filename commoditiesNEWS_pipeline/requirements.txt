@@ -1,8 +1,0 @@
-beautifulsoup4
-feedparser
-openpyxl
-pandas
-requests
-schedule
-textblob
-trafilatura
