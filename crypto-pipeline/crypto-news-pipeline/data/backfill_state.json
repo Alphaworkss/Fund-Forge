@@ -1,0 +1,97 @@
+{
+  "sources": {
+    "Kraken": {
+      "completed_sitemaps": [],
+      "last_completed_page": 3,
+      "oldest_date_reached": "2025-12-10T00:00:00+00:00",
+      "done": true
+    },
+    "CoinDesk": {
+      "completed_sitemaps": [
+        "https://www.coindesk.com/sitemaps/articles-1.xml",
+        "https://www.coindesk.com/sitemaps/articles-2.xml",
+        "https://www.coindesk.com/sitemaps/articles-3.xml",
+        "https://www.coindesk.com/sitemaps/articles-4.xml",
+        "https://www.coindesk.com/sitemaps/articles-5.xml",
+        "https://www.coindesk.com/sitemaps/articles-6.xml",
+        "https://www.coindesk.com/sitemaps/articles-7.xml",
+        "https://www.coindesk.com/sitemaps/articles-8.xml",
+        "https://www.coindesk.com/sitemaps/articles-9.xml",
+        "https://www.coindesk.com/sitemaps/articles-10.xml",
+        "https://www.coindesk.com/sitemaps/articles-11.xml",
+        "https://www.coindesk.com/sitemaps/articles-12.xml",
+        "https://www.coindesk.com/sitemaps/articles-13.xml",
+        "https://www.coindesk.com/sitemaps/articles-14.xml",
+        "https://www.coindesk.com/sitemaps/articles-15.xml",
+        "https://www.coindesk.com/sitemaps/articles-16.xml",
+        "https://www.coindesk.com/sitemaps/articles-17.xml",
+        "https://www.coindesk.com/sitemaps/articles-18.xml"
+      ],
+      "last_completed_page": 0,
+      "oldest_date_reached": "2025-08-03T05:33:52.222000+00:00",
+      "done": true
+    },
+    "Cointelegraph": {
+      "completed_sitemaps": [],
+      "last_completed_page": 0,
+      "oldest_date_reached": "2026-04-20T11:56:20.522000+00:00",
+      "done": true
+    },
+    "Decrypt": {
+      "completed_sitemaps": [
+        "https://decrypt.co/post-sitemap.xml",
+        "https://decrypt.co/post-sitemap58.xml",
+        "https://decrypt.co/post-sitemap57.xml",
+        "https://decrypt.co/post-sitemap56.xml",
+        "https://decrypt.co/post-sitemap55.xml",
+        "https://decrypt.co/post-sitemap54.xml",
+        "https://decrypt.co/post-sitemap53.xml",
+        "https://decrypt.co/post-sitemap52.xml",
+        "https://decrypt.co/post-sitemap51.xml",
+        "https://decrypt.co/post-sitemap50.xml",
+        "https://decrypt.co/post-sitemap49.xml",
+        "https://decrypt.co/post-sitemap48.xml",
+        "https://decrypt.co/post-sitemap47.xml",
+        "https://decrypt.co/post-sitemap46.xml",
+        "https://decrypt.co/post-sitemap45.xml",
+        "https://decrypt.co/post-sitemap44.xml",
+        "https://decrypt.co/post-sitemap43.xml",
+        "https://decrypt.co/post-sitemap42.xml",
+        "https://decrypt.co/post-sitemap41.xml",
+        "https://decrypt.co/post-sitemap40.xml",
+        "https://decrypt.co/post-sitemap39.xml",
+        "https://decrypt.co/post-sitemap38.xml",
+        "https://decrypt.co/post-sitemap37.xml"
+      ],
+      "last_completed_page": 0,
+      "oldest_date_reached": "2026-08-02T17:18:51+00:00",
+      "done": true
+    },
+    "Bitcoin Magazine": {
+      "completed_sitemaps": [
+        "https://bitcoinmagazine.com/post-sitemap1.xml"
+      ],
+      "last_completed_page": 0,
+      "oldest_date_reached": "2025-07-09T22:23:31+00:00",
+      "done": false
+    },
+    "The Block": {
+      "completed_sitemaps": [],
+      "last_completed_page": 0,
+      "oldest_date_reached": null,
+      "done": false
+    },
+    "OKX": {
+      "completed_sitemaps": [],
+      "last_completed_page": 0,
+      "oldest_date_reached": null,
+      "done": true
+    },
+    "Bybit": {
+      "completed_sitemaps": [],
+      "last_completed_page": 93,
+      "oldest_date_reached": "2025-01-30T00:00:00+00:00",
+      "done": false
+    }
+  }
+}

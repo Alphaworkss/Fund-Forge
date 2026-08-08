@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+feedparser
+pandas
+pyarrow
+sqlalchemy
+python-dotenv
+openpyxl
+pytest
+apscheduler
+cdsapi
+xarray
+netCDF4

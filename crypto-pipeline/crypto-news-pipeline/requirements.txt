@@ -1,0 +1,15 @@
+feedparser==6.0.11
+requests==2.32.3
+beautifulsoup4==4.12.3
+trafilatura==2.0.0
+vaderSentiment==3.3.2
+SQLAlchemy==2.0.36
+pandas==2.2.3
+APScheduler==3.11.0
+pytest==8.3.4
+
+# Optional: newspaper3k is preferred for full-article extraction when it
+# installs cleanly (it is broken on Python 3.13 due to lxml.html.clean).
+# The code automatically falls back to trafilatura when it is absent.
+# newspaper3k==0.2.8
+# lxml_html_clean==0.4.1
