@@ -881,10 +881,17 @@ elif page == "Market Rankings":
     change_column = f"Change_NAV_{horizon}_Percent"
     prediction_column = f"Predicted_NAV_{horizon}"
 
-    ranking_columns = [
+    """ ranking_columns = [
         "AMC", "Fund", "FundID", "Current_NAV",
         prediction_column, change_column
+    ] """
+    
+
+    ranking_columns = [
+      "Fund", "Current_NAV",
+        prediction_column, change_column
     ]
+
 
     ranking_columns = [
         column for column in ranking_columns if column in df.columns
