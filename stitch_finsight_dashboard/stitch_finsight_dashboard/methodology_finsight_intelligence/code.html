@@ -1,0 +1,327 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>FinSight Intelligence - Methodology</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e0e0ff",
+                        "surface-tint": "#bdc2ff",
+                        "secondary-container": "#00a572",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#2d3449",
+                        "inverse-on-surface": "#283044",
+                        "primary-container": "#818cf8",
+                        "on-secondary-fixed": "#002113",
+                        "outline": "#908f9e",
+                        "on-tertiary-fixed-variant": "#92002a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#4953bc",
+                        "on-surface-variant": "#c6c5d5",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "on-primary-fixed-variant": "#2f3aa3",
+                        "on-secondary-container": "#00311f",
+                        "on-background": "#dae2fd",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-dim": "#0b1326",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#222a3d",
+                        "on-tertiary-fixed": "#40000d",
+                        "background": "#0b1326",
+                        "tertiary-fixed-dim": "#ffb2b7",
+                        "tertiary-container": "#ff5c72",
+                        "surface-container-low": "#131b2e",
+                        "on-primary": "#131e8c",
+                        "primary": "#bdc2ff",
+                        "on-primary-fixed": "#000767",
+                        "surface-bright": "#31394d",
+                        "secondary": "#4edea3",
+                        "on-tertiary-container": "#630019",
+                        "surface-container": "#171f33",
+                        "on-primary-container": "#101b8a",
+                        "outline-variant": "#454653",
+                        "surface": "#0b1326",
+                        "tertiary-fixed": "#ffdadb",
+                        "on-tertiary": "#67001b",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#6ffbbe",
+                        "tertiary": "#ffb2b7",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-surface": "#dae2fd",
+                        "surface-container-lowest": "#060e20",
+                        "on-secondary": "#003824",
+                        "on-surface": "#dae2fd",
+                        "surface-container-highest": "#2d3449"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xs": "8px",
+                        "xl": "40px",
+                        "gutter": "20px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "container-max": "1440px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "data-mono": ["JetBrains Mono"],
+                        "display-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "data-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .ticker-scroll {
+            animation: ticker 30s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-16">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant fixed top-0 w-full z-50 flex justify-between items-center px-lg h-16">
+<div class="flex items-center gap-lg">
+<span class="font-display-md text-display-md font-bold text-on-surface tracking-tight"><div class="flex items-center gap-sm"><img src="https://lh3.googleusercontent.com/aida/AP1WRLuaAyyJIe5FuIAwMbevDAnBSURL7hsHpHURHSuwbFLwjTfHRaadqoNC6YuWKWpPJZDbuDV_yv2b97a1baV-nsmycMHDyA5hbrus99UcsjWxijrVE1RtCZK80Z4ufMOb1J2yiyXfHZ1fd7movFrRe0SjhNjlZNbVLjjhqUWXddoEzwCJOpKNpp2LFtGq0WRKOaS39sIQXpkyD2E7zoGVPTyOCq_ZSV5bAJSWGKCWolTgEnQgOcNmnmUs3A" alt="FundForge Logo" class="h-8 w-8"><span class="">FundForge</span></div></span>
+<div class="hidden md:flex gap-md ml-xl items-center pt-1">
+<!-- Navigation Links with Active State Logic for 'About' -->
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Markets</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Forecasts</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Watchlist</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Horizontal Ticker -->
+<div class="w-full bg-surface-container-low border-b border-outline-variant overflow-hidden h-8 flex items-center mt-1">
+<div class="flex whitespace-nowrap ticker-scroll font-data-mono text-data-mono text-on-surface-variant">
+<span class="mx-md">BTC <span class="text-secondary ml-1">+$420.50 (0.6%)</span></span>
+<span class="mx-md">ETH <span class="text-secondary ml-1">+$12.30 (0.4%)</span></span>
+<span class="mx-md">AAPL <span class="text-error ml-1">-$1.20 (0.8%)</span></span>
+<span class="mx-md">TSLA <span class="text-secondary ml-1">+$5.60 (2.1%)</span></span>
+<span class="mx-md">GOLD <span class="text-on-surface-variant ml-1">+$0.00 (0.0%)</span></span>
+<!-- Duplicate for seamless scroll -->
+<span class="mx-md">BTC <span class="text-secondary ml-1">+$420.50 (0.6%)</span></span>
+<span class="mx-md">ETH <span class="text-secondary ml-1">+$12.30 (0.4%)</span></span>
+<span class="mx-md">AAPL <span class="text-error ml-1">-$1.20 (0.8%)</span></span>
+<span class="mx-md">TSLA <span class="text-secondary ml-1">+$5.60 (2.1%)</span></span>
+<span class="mx-md">GOLD <span class="text-on-surface-variant ml-1">+$0.00 (0.0%)</span></span>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-md md:px-lg py-xl flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center max-w-3xl mx-auto space-y-md my-xl">
+<h1 class="font-display-lg text-display-lg text-on-surface">Intelligence Driven by Data</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Our forecasting methodology relies on an ensemble of specialized AI models, rigorously backtested and continuously refined to provide transparent, probabilistic price ranges across major asset classes.
+            </p>
+</section>
+<!-- Process Diagram -->
+<section class="bg-surface-container rounded-xl border border-outline-variant p-lg flex flex-col gap-lg">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">The Forecasting Pipeline</h2>
+<div class="flex flex-col md:flex-row items-center justify-between gap-md relative">
+<!-- Line connector (desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant -z-10 -translate-y-1/2"></div>
+<div class="flex flex-col items-center gap-sm bg-surface p-md rounded-lg border border-outline-variant z-10 w-48 text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">01. Data Ingestion</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs">Market data, sentiment, &amp; macro indicators</span>
+</div>
+<div class="flex flex-col items-center gap-sm bg-surface p-md rounded-lg border border-outline-variant z-10 w-48 text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">02. Ensemble Models</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs">ARIMA, XGBoost, and PatchTST processing</span>
+</div>
+<div class="flex flex-col items-center gap-sm bg-surface p-md rounded-lg border border-outline-variant z-10 w-48 text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">03. Forecast Generation</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs">Calculating confidence intervals &amp; price bounds</span>
+</div>
+<div class="flex flex-col items-center gap-sm bg-surface p-md rounded-lg border border-outline-variant z-10 w-48 text-center">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">04. Actionable Insights</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs">Delivering structured data to your dashboard</span>
+</div>
+</div>
+</section>
+<!-- Supported Asset Classes -->
+<section class="flex flex-col gap-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Supported Asset Classes</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<div class="bg-surface-container border border-outline-variant rounded-lg p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="trending_up">trending_up</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Equities (Stocks)</span>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded-lg p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="currency_bitcoin">currency_bitcoin</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Cryptocurrency</span>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded-lg p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="layers">layers</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Commodities</span>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded-lg p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_balance">account_balance</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Mutual Funds</span>
+</div>
+</div>
+</section>
+<!-- Core Concepts Bento -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- How Forecasting Works -->
+<div class="bg-surface-container-high border border-outline-variant rounded-xl p-lg flex flex-col gap-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">analytics</span> How Forecasting Works
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Our system treats financial forecasting as a multifaceted time-series problem. Rather than relying on a single algorithm, we aggregate signals across multiple architectures. We analyze historical price action, order book depth, and macroeconomic indicators, feeding this high-dimensional data into our models to project future state probabilities.
+                </p>
+</div>
+<!-- Why a Price Range -->
+<div class="bg-surface-container-high border border-outline-variant rounded-xl p-lg flex flex-col gap-md relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-background to-background"></div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-sm relative z-10">
+<span class="material-symbols-outlined text-secondary">hdr_strong</span> Why a Price Range?
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed relative z-10">
+                    Markets are inherently stochastic. Predicting an exact future price is computationally and practically impossible. Instead, we generate a <strong>Cone of Uncertainty</strong>. By calculating the 70% and 95% confidence intervals, we provide a realistic band where the asset is statistically likely to trade, visualizing volatility and risk rather than false certainty.
+                </p>
+</div>
+</section>
+<!-- AI Models Engine -->
+<section class="flex flex-col gap-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-xs">The Engine: AI Models</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Model Card 1 -->
+<div class="bg-surface border border-outline-variant rounded-lg p-md flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Statistical Base</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">show_chart</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">ARIMA</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        AutoRegressive Integrated Moving Average. Provides our foundational baseline by analyzing standard historical trends, seasonality, and mean-reversion characteristics in stationary data.
+                    </p>
+</div>
+<!-- Model Card 2 -->
+<div class="bg-surface border border-outline-variant rounded-lg p-md flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Gradient Boosting</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">account_tree</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">XGBoost</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Excels at handling tabular data and non-linear relationships. We use XGBoost to interpret complex interactions between varied macroeconomic indicators and price movements.
+                    </p>
+</div>
+<!-- Model Card 3 -->
+<div class="bg-surface border border-primary rounded-lg p-md flex flex-col gap-sm relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-label-caps text-label-caps text-primary">Transformer</span>
+<span class="material-symbols-outlined text-primary text-sm">psychology</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface relative z-10">PatchTST</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm relative z-10">
+                        A state-of-the-art time-series transformer model. By patching time series data, it captures long-term dependencies and subtle contextual patterns that traditional models miss.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Validation -->
+<section class="bg-surface-container rounded-xl border border-outline-variant p-lg flex flex-col md:flex-row gap-lg items-center">
+<div class="flex-1 flex flex-col gap-md">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Walk-Forward Validation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    To prevent overfitting and ensure real-world accuracy, we employ strict Walk-Forward Validation. Instead of standard cross-validation which leaks future data, we train models on a sliding historical window and test them exclusively on unseen subsequent periods.
+                </p>
+<div class="flex gap-sm mt-xs">
+<span class="px-xs py-[2px] rounded bg-secondary-container/20 border border-secondary-container text-secondary text-xs font-data-mono">Low Bias</span>
+<span class="px-xs py-[2px] rounded bg-primary-container/20 border border-primary-container text-primary text-xs font-data-mono">High Robustness</span>
+</div>
+</div>
+<div class="flex-1 w-full bg-surface-dim rounded border border-outline-variant p-md flex flex-col gap-xs font-data-mono text-xs text-on-surface-variant">
+<div class="flex items-center gap-xs"><div class="w-16 h-2 bg-outline-variant rounded"></div> Train Window 1 → <div class="w-8 h-2 bg-primary rounded"></div> Test</div>
+<div class="flex items-center gap-xs ml-4"><div class="w-16 h-2 bg-outline-variant rounded"></div> Train Window 2 → <div class="w-8 h-2 bg-primary rounded"></div> Test</div>
+<div class="flex items-center gap-xs ml-8"><div class="w-16 h-2 bg-outline-variant rounded"></div> Train Window 3 → <div class="w-8 h-2 bg-primary rounded"></div> Test</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-dim border-t border-outline-variant w-full py-md px-lg flex flex-col md:flex-row justify-between items-center mt-auto">
+<div class="text-on-surface-variant font-semibold font-body-md text-body-md mb-md md:mb-0">FundForge</div>
+<div class="text-on-surface-variant font-body-md text-body-md text-center md:text-left mb-md md:mb-0 max-w-2xl text-xs">© 2024 FundForge AI. Financial estimates are for informational purposes only and do not constitute investment advice.</div>
+<div class="flex gap-md">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors" href="#">Risk Disclosure</a>
+</div>
+</footer>
+
+
+</body></html>
